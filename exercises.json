@@ -1,0 +1,39 @@
+{
+    "exercises": [
+        {
+            "name": "Push-ups",
+            "category": "Bodyweight",
+            "muscle": "Chest",
+            "difficulty": "Beginner",
+            "image": "/images/pushups.gif"
+        },
+        {
+            "name": "Pull-ups",
+            "category": "Bodyweight",
+            "muscle": "Back",
+            "difficulty": "Intermediate",
+            "image": "/images/pullups.gif"
+        },
+        {
+            "name": "Squats",
+            "category": "Bodyweight",
+            "muscle": "Legs",
+            "difficulty": "Beginner",
+            "image": "/images/squats.gif"
+        },
+        {
+            "name": "Bench Press",
+            "category": "Weight Training",
+            "muscle": "Chest",
+            "difficulty": "Intermediate",
+            "image": "/images/bench-press.gif"
+        },
+        {
+            "name": "Deadlift",
+            "category": "Weight Training",
+            "muscle": "Back",
+            "difficulty": "Advanced",
+            "image": "/images/deadlift.gif"
+        }
+    ]
+}

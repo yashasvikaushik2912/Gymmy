@@ -1,0 +1,141 @@
+.workout-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.timer-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timer {
+    font-size: 64px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.timer-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.workout-section {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e63946;
+}
+
+.exercise-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.exercise-input select,
+.exercise-input input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #f8f9fa;
+}
+
+.exercise-list {
+    margin-bottom: 20px;
+}
+
+.exercise-item {
+    background-color: rgba(230, 57, 70, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exercise-item button {
+    background-color: transparent;
+    border: none;
+    color: #e63946;
+    cursor: pointer;
+}
+
+.finish-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.finish-btn:hover {
+    background-color: #c1121f;
+}
+
+
+.exercise-set {
+    background-color: rgba(230, 57, 70, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exercise-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.set-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.set-input {
+    display: grid;
+    grid-template-columns: 80px 100px 100px 30px;
+    gap: 10px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.set-input span {
+    color: #f8f9fa;
+}
+
+.set-input input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #f8f9fa;
+}
+
+.set-input button {
+    background-color: transparent;
+    border: none;
+    color: #e63946;
+    cursor: pointer;
+    font-size: 18px;
+}

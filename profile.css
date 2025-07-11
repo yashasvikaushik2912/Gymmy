@@ -1,0 +1,260 @@
+/* General Page Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #f0f2f5; /* A slightly different light page background for variety */
+    /* color: #1c1e21; /* Default text color for the page (darker) */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+p {
+    color: black;
+}
+
+.profile-container {
+    max-width: 1100px; /* Slightly wider for better spacing on larger screens */
+    margin: 30px auto; /* Reduced top/bottom margin */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between major sections */
+}
+
+/* Profile Header */
+.profile-header {
+    background-color: #1c1e21;
+    /*border-radius: 8px;*/
+    padding: 25px 30px; /* Adjusted padding */
+    border: 1px solid #dfe0e4; /* Softer border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    text-align: center; /* Center the name */
+}
+
+.profile-info h2 { /* Profile Name */
+    color: #1c1e21; /* Dark primary text */
+    margin: 0 0 5px 0; /* Added bottom margin */
+    font-size: 28px; /* Slightly reduced */
+    font-weight: 700;
+}
+
+.profile-info p { /* User Email or other info */
+    color: #555b61; /* Softer secondary text */
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax for responsiveness */
+    gap: 25px;
+    /* margin-bottom: 0; /* Removed as profile-container gap handles it */
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #dfe0e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+}
+
+.stat-card h3 { /* Stat Title */
+    color: #555b61;
+    margin: 0 0 8px;
+    font-size: 16px; /* Slightly reduced */
+    font-weight: 500;
+}
+
+.stat-card p { /* Stat Value */
+    color: #1070e0; /* A different accent blue */
+    margin: 0;
+    font-size: 26px; /* Slightly reduced */
+    font-weight: bold;
+}
+
+/* Progress Section (Chart) */
+.progress-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    border: 1px solid #dfe0e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.progress-section h3 {
+    color: #1c1e21;
+    margin: 0 0 15px; /* Reduced bottom margin */
+    font-size: 20px; /* Slightly reduced */
+    font-weight: 600;
+    text-align: left; /* Align heading to the left */
+}
+
+#progressChart {
+    width: 100%;
+    height: 300px;
+    /* margin-top: 0; /* Removed as section padding handles it */
+}
+
+/* Workout History */
+.workout-history {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    border: 1px solid #dfe0e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.workout-history h3 {
+    color: #1c1e21;
+    margin: 0 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Individual Workout Item */
+#workoutList { /* Target the container for workout items */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between workout items */
+}
+
+/* Replace the existing .workout-item styles around line 129 */
+.workout-item {
+    background-color: #ffffff; /* White background */
+    border-radius: 6px;
+    padding: 15px 20px;
+    border: 1px solid #e9eaed;
+}
+
+.workout-item h4 { /* Workout Date/Title */
+    color: #1070e0; /* Accent blue */
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.workout-item p { /* Workout Details */
+    color: #d6dde3; /* Dark gray text */
+    margin: 3px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* And replace the conflicting styles around line 230 */
+#workoutList .workout-item {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #dfe0e4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+#workoutList .workout-item h4 {
+    color: #1070e0; /* Blue for workout title */
+    margin-top: 0;
+}
+
+#workoutList .workout-item p {
+    color: #3a3f44; /* Dark gray text for details */
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+        gap: 20px;
+    }
+    .profile-header,
+    .progress-section,
+    .workout-history {
+        padding: 20px;
+    }
+    .profile-info h2 {
+        font-size: 24px;
+    }
+    .stat-card p {
+        font-size: 22px;
+    }
+    .progress-section h3,
+    .workout-history h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack stat cards */
+        gap: 20px;
+    }
+    .profile-info h2 {
+        font-size: 22px;
+    }
+    .stat-card h3 {
+        font-size: 15px;
+    }
+    .stat-card p {
+        font-size: 20px;
+    }
+}
+
+.stat-item h3,
+.stat-item p {
+    color: #333; /* Or any dark color that contrasts with your box background */
+    margin: 5px 0;
+}
+
+.workout-item h4,
+.workout-item p {
+    color: #333; /* Or any dark color */
+    margin: 5px 0;
+}
+
+/* If your stat boxes have a specific class, target that, for example: */
+.stats-container .stat-box {
+    background-color: #fff; /* Assuming white background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    /* Add any other styling for the box itself */
+}
+
+.stats-container .stat-box h3 {
+    color: #555; /* Darker color for headings */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.stats-container .stat-box p {
+    color: #e63946; /* Theme color for the stat value, ensure it's readable */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#workoutList .workout-item {
+    background-color: #333; /* Light background for workout items */
+    border: 1px solid #e63946;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#workoutList .workout-item h4 {
+    color: #e63946; /* Theme color for workout title */
+    margin-top: 0;
+}
+
+#workoutList .workout-item p {
+    color: #ffffff; /* Dark text for details */
+    font-size: 0.9em;
+}

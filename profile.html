@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Gymmy</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body onload="checkAuth(); loadProfile();">
+    <nav>
+        <a href="index.html"><div class="nav-left">
+            <h1 id="header">Gymmy</h1>
+            <h3 id="tagline">Your Gym Assistant</h3>
+        </div></a>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="workout.html">Workout Tracker</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Will be populated by checkAuth() -->
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2 id="profileName"></h2>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Weekly Hours</h3>
+                <p id="weeklyHours">0 hours</p>
+            </div>
+            <div class="stat-card">
+                <h3>Current Streak</h3>
+                <p id="currentStreak">0 days</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Workouts</h3>
+                <p id="totalWorkouts">0</p>
+            </div>
+        </div>
+
+        <div class="workout-history">
+            <h3>Recent Workouts</h3>
+            <div id="workoutList">
+                <!-- Will be populated by loadProfile() -->
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

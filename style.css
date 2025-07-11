@@ -1,0 +1,355 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #f8f9fa;
+}
+
+nav {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e63946;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+}
+
+nav > a{
+    text-decoration: none;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.features-section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    scroll-margin-top: 100px;
+}
+
+#header {
+    font-size: 32px;
+    color: #e63946;
+    margin-bottom: 0;
+    margin-left: 20px;
+    line-height: 1;
+}
+
+#tagline {
+    font-size: 16px;
+    color: #f8f9fa;
+    margin-top: 0;
+    margin-left: 20px;
+    line-height: 1;
+}
+
+.nav-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+
+.nav-right span {
+    color: #f8f9fa;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 2px solid #e63946;
+    color: #e63946;
+}
+
+.login-btn:hover {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+.signup-btn {
+    background-color: #e63946;
+    border: none;
+    color: #ffffff;
+}
+
+.signup-btn:hover {
+    background-color: #c1121f;
+    transform: scale(1.05);
+}
+
+.profile-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.profile-link:hover {
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+.profile-link a {
+    color: #f8f9fa; /* Or your desired link color */
+    text-decoration: none;
+}
+
+.profile-link:hover a {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+.auth-btn.logout-btn-js {
+    /* Style your logout button similar to login/signup */
+    background-color: #e63946; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Example margin */
+}
+
+.auth-btn.logout-btn-js:hover {
+    background-color: #d0313d;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 180px 20px;
+    margin-bottom: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 48px;
+    color: #e63946;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    font-size: 24px;
+    color: #f8f9fa;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.profile-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover {
+    color: #e63946;
+}
+
+
+button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #c1121f;
+    transform: scale(1.05);
+}
+
+.features-section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#about {
+    text-align: center;
+    font-size: 36px;
+    color: #e63946;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: rgba(230, 57, 70, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e63946;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #e63946;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #d3d3d3;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-left {
+        margin-bottom: 10px;
+    }
+
+    .nav-center {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: inline-block;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 100px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .feature-card {
+        margin: 0;
+    }
+
+    /* Buttons */
+    .login-btn, .signup-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 480px) {
+    #header {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    #tagline {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+}

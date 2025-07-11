@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymmy - Your Gym Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="auth.js"></script>
+</head>
+<body onload="checkAuth()">
+    <p id="TOP" style="display: none;"></p>
+    <nav>
+        <a href="index.html"><div class="nav-left">
+            <h1 id="header">Gymmy</h1>
+            <h3 id="tagline">Your Gym Assistant</h3>
+        </div></a>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="workout.html">Workout Tracker</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- This will be managed by auth.js -->
+            <span id="profileLink" style="display: none; margin-right: 15px; cursor:pointer;" class="profile-link"></span> 
+            <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+            <!-- Logout button will be added here by auth.js -->
+        </div>
+    </nav>  
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">Transform Your Fitness Journey</h2>
+            <p class="hero-text">Personalized workouts, progress tracking, and expert guidance - all in one place & absolutely <span style="font-weight: bolder;">FREE</span>.</p>
+            <button onclick="handleStartNow()">Start Now</button>
+        </div>
+    </div>
+
+    <section class="features-section">
+        <h2 id="about">About</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Workout Generator</h3>
+                <p>Custom workouts based on your fitness level and goals</p>
+            </div>
+            <div class="feature-card">
+                <h3>Progress Tracking</h3>
+                <p>Monitor your fitness journey with detailed analytics</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Plans</h3>
+                <p>Personalized roadmaps to achieve your fitness goals</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Suggestions</h3>
+                <p>AI-powered recommendations for continuous improvement</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

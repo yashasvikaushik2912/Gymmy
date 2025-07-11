@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises - Gymmy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exercises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="auth.js"></script>
+    <script src="exercises.js"></script>
+</head>
+<body onload="checkAuth(); loadExercises()">
+    <nav>
+        <a href="index.html"><div class="nav-left">
+            <h1 id="header">Gymmy</h1>
+            <h3 id="tagline">Your Gym Assistant</h3>
+        </div></a>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="workout.html">Workout</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Will be populated by checkAuth() -->
+        </div>
+    </nav>
+
+    <div class="exercises-container">
+        <div class="filters">
+            <select id="categoryFilter" onchange="filterExercises()">
+                <option value="">All Categories</option>
+                <option value="Bodyweight">Bodyweight</option>
+                <option value="Weight Training">Weight Training</option>
+            </select>
+            <select id="muscleFilter" onchange="filterExercises()">
+                <option value="">All Muscle Groups</option>
+                <option value="Chest">Chest</option>
+                <option value="Back">Back</option>
+                <option value="Legs">Legs</option>
+            </select>
+            <select id="difficultyFilter" onchange="filterExercises()">
+                <option value="">All Difficulties</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <select id="sortBy" onchange="filterExercises()">
+                <option value="name">Sort by Name</option>
+                <option value="difficulty">Sort by Difficulty</option>
+                <option value="category">Sort by Category</option>
+            </select>
+        </div>
+        <div id="exercisesList" class="exercises-grid">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+</body>
+</html>

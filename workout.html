@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout - Gymmy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="auth.js"></script>
+    <script src="workout.js"></script>
+</head>
+<body onload="checkAuth(); loadExercises()">
+    <nav>
+        <a href="index.html"><div class="nav-left">
+            <h1 id="header">Gymmy</h1>
+            <h3 id="tagline">Your Gym Assistant</h3>
+        </div></a>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Will be populated by checkAuth() -->
+        </div>
+    </nav>
+
+    <div class="workout-container">
+        <div class="timer-section">
+            <div class="timer" id="timer">00:00:00</div>
+            <div class="timer-controls">
+                <button onclick="startTimer()" id="startBtn">Start</button>
+                <button onclick="pauseTimer()" id="pauseBtn" disabled>Pause</button>
+                <button onclick="resetTimer()" id="resetBtn">Reset</button>
+            </div>
+        </div>
+
+        <div class="workout-section">
+            <h2>Current Workout</h2>
+            <div class="exercise-input">
+                <select id="exerciseSelect">
+                    <option value="">Select Exercise</option>
+                </select>
+                <button onclick="addExerciseToWorkout()" class="add-exercise-btn">Add Exercise</button>
+            </div>
+            <div id="currentWorkout" class="exercise-list"></div>
+            <button onclick="finishWorkout()" class="finish-btn">Finish Workout</button>
+        </div>
+    </div>
+</body>
+</html>

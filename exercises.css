@@ -1,0 +1,73 @@
+.exercises-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.filters select {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #f8f9fa;
+    border: 1px solid #e63946;
+    cursor: pointer;
+}
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.exercise-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e63946;
+    transition: transform 0.2s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-card h3 {
+    color: #e63946;
+    margin: 0 0 10px;
+}
+
+.exercise-card p {
+    color: #f8f9fa;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.exercise-card .completed {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.exercise-card .not-completed {
+    color: #f8f9fa;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+
+.exercise-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
